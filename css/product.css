@@ -1,118 +1,74 @@
-/* Universal styles for the entire website. */
-body {
-    margin: 0;
-    font-family: 'Bitcount Grid Single', sans-serif;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    color: #fff;
-    box-sizing: border-box;
-    /* Add background image properties */
-    background-image: url('../images/NOBODYBEANYBODYGOD.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; /* Ensure image doesn't tile */
-    background-attachment: fixed; /* Keep image fixed in viewport */
-    opacity: 0.8; /* Apply opacity to the background image */
-}
-
-
-
-/* Main container for the landing page. */
-.container {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/* Header and navigation styling. */
-.header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px 40px;
-    box-sizing: border-box;
-    z-index: 10;
-}
-
-.navigation {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 500;
-    font-family: 'Libertinus Serif Display', serif;
-    position: relative;
-    transition: opacity 0.2s;
-}
-
-.nav-link:hover {
-    opacity: 0.8;
-}
+/* Product specific styles */
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Spacing between items */
     padding: 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 100px auto 20px auto; /* Adjust margin-top for header */
 }
 
-
-
-/* Common styles for the other pages. */
-
-
-
 .product-box {
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.091);
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Allow content to stack */
+    justify-content: flex-end; /* Push content to the bottom */
     align-items: center;
-    height: 150px;
+    min-height: 250px; /* Give it a reasonable height */
     position: relative;
+    border-radius: 8px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.product-box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-box h3 {
+    color: #000;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.product-box p {
+    color: #555;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 .buy-button {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: #ff000000;
-    color: rgb(0, 0, 0);
+    background-color: #000000; /* Red background */
+    color: white;
     border: none;
-    padding: 8px 16px;
+    padding: 10px 20px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.1rem;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
+.buy-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
 
-
-/* Responsive design for smaller screens. */
+/* Responsive adjustments for product page */
 @media (max-width: 768px) {
-    .header {
-        justify-content: center;
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        margin-top: 80px;
     }
-    .navigation {
-        gap: 15px;
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        margin-top: 60px;
     }
-    
 }

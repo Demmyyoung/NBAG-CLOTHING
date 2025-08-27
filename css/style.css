@@ -71,13 +71,27 @@ body {
     opacity: 0.8;
 }
 
+/* General image responsiveness */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below images */
+}
+
 /* Responsive design for smaller screens. */
 @media (max-width: 768px) {
     .header {
-        justify-content: center;
+        justify-content: space-around; /* Distribute navigation items */
+        padding: 20px; /* Adjust padding */
     }
     .navigation {
-        gap: 15px;
+        gap: 10px; /* Reduce gap further */
+        flex-wrap: wrap; /* Allow navigation items to wrap */
+        justify-content: center; /* Center items when wrapped */
+    }
+    .nav-link {
+        font-size: 1rem; /* Smaller font size for navigation links */
+        padding: 5px 10px; /* Adjust padding */
     }
     .main-title {
         font-size: 3rem;
@@ -94,4 +108,25 @@ body {
     .product-image, .product-text {
         width: 100%;
     }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px; /* Even smaller padding */
+    }
+    .navigation {
+        flex-direction: column; /* Stack navigation items vertically */
+        gap: 5px; /* Smaller gap when stacked */
+    }
+    .nav-link {
+        font-size: 0.9rem; /* Even smaller font size */
+        padding: 5px; /* Minimal padding */
+    }
+    .main-title {
+        font-size: 2rem; /* Further reduce font size */
+    }
+    .subtitle {
+        font-size: 1.2rem; /* Further reduce font size */
+    }
+    /* Adjust gallery and product grid for very small screens if needed */
 }

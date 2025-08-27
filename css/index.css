@@ -19,3 +19,15 @@
     color: #FF0000;
     margin: 0;
 }
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: calc(100vh - 100px); /* Adjust height to account for header */
+    width: 100%;
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box;
+}

@@ -1,99 +1,4 @@
-/* Universal styles for the entire website. */
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    color: #fff;
-    box-sizing: border-box;
-}
-
-/* Background image style for the landing page. */
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('placeholder-background.jpg'); /* Replace with your background image URL */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.8;
-    z-index: -1;
-}
-
-/* Main container for the landing page. */
-.container {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/* Header and navigation styling. */
-.header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px 40px;
-    box-sizing: border-box;
-    z-index: 10;
-}
-
-.navigation {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 500;
-    position: relative;
-    transition: opacity 0.2s;
-}
-
-.nav-link:hover {
-    opacity: 0.8;
-}
-
-/* Main content for the landing page. */
-.main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.main-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 6rem;
-    text-transform: uppercase;
-    color: white;
-    margin: 0;
-}
-
-.subtitle {
-    font-family: 'Homemade Apple', cursive;
-    font-size: 2rem;
-    color: #FF0000;
-    margin: 0;
-}
-
-/* Common styles for the other pages. */
+/* Gallery specific styles */
 
 .gallery-grid {
     position: relative;
@@ -102,6 +7,7 @@ body {
     height: 100vh; 
     padding: 20px;
     box-sizing: border-box;
+    margin-top: 80px; /* Adjust for header */
 }
 
 .product-item {
@@ -112,49 +18,50 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    border-radius: 8px; /* Slightly rounded corners */
 }
 
 .product-item:nth-child(1) {
-    top: 10%;
-    left: 5%;
-    width: 300px;
-    height: 400px;
+    top: 10vh;
+    left: 5vw;
+    width: 25vw;
+    height: 35vh;
     z-index: 2;
     transform: rotate(-5deg);
 }
 
 .product-item:nth-child(2) {
-    top: 20%;
-    left: 40%;
-    width: 350px;
-    height: 450px;
+    top: 20vh;
+    left: 40vw;
+    width: 28vw;
+    height: 40vh;
     z-index: 3;
     transform: rotate(5deg);
 }
 
 .product-item:nth-child(3) {
-    top: 50%;
-    left: 15%;
-    width: 400px;
-    height: 300px;
+    top: 50vh;
+    left: 15vw;
+    width: 30vw;
+    height: 25vh;
     z-index: 1;
     transform: rotate(-10deg);
 }
 
 .product-item:nth-child(4) {
-    top: 60%;
-    left: 60%;
-    width: 300px;
-    height: 400px;
+    top: 60vh;
+    left: 60vw;
+    width: 25vw;
+    height: 35vh;
     z-index: 4;
     transform: rotate(10deg);
 }
 
 .product-item:nth-child(5) {
-    top: 5%;
-    left: 70%;
-    width: 250px;
-    height: 350px;
+    top: 5vh;
+    left: 70vw;
+    width: 20vw;
+    height: 30vh;
     z-index: 1;
     transform: rotate(15deg);
 }
@@ -163,72 +70,43 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block; /* Remove extra space below image */
 }
 
-.buy-button {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 5px;
-}
-
-.product-detail-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 900px;
-    width: 90%;
-    margin-top: 50px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
-}
-
-.product-image {
-    width: 50%;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.product-text {
-    width: 50%;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-/* Responsive design for smaller screens. */
+/* Responsive adjustments for gallery */
 @media (max-width: 768px) {
-    .header {
-        justify-content: center;
-    }
-    .navigation {
-        gap: 15px;
-    }
-    .main-title {
-        font-size: 3rem;
-    }
-    .subtitle {
-        font-size: 1.5rem;
-    }
     .gallery-grid {
+        display: grid; /* Switch to grid layout */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        height: auto; /* Allow height to adjust */
+        margin-top: 60px; /* Adjust for header */
+    }
+    .product-item {
+        position: relative; /* Remove absolute positioning */
+        width: auto; /* Let grid handle width */
+        height: 250px; /* Fixed height for consistency in grid */
+        transform: none; /* Remove rotation */
+        margin-bottom: 0; /* Remove margin-bottom if any */
+    }
+    .product-item:nth-child(1),
+    .product-item:nth-child(2),
+    .product-item:nth-child(3),
+    .product-item:nth-child(4),
+    .product-item:nth-child(5) {
+        top: auto;
+        left: auto;
+        width: auto;
         height: auto;
     }
-    /* Stack the gallery items on smaller screens */
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+        margin-top: 50px; /* Further adjust for header */
+    }
     .product-item {
-        position: relative;
-        width: 90%;
-        margin-bottom: 20px;
-    }
-    .product-detail-container {
-        flex-direction: column;
-    }
-    .product-image, .product-text {
-        width: 100%;
+        height: 200px; /* Smaller fixed height for very small screens */
     }
 }
