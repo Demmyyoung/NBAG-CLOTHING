@@ -1,0 +1,21 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title {
+    font-family: 'Bitcount Grid Single', sans-serif;
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+}
+
+.subtitle {
+    font-family: 'Libertinus Serif Display', serif;
+    font-size: 2rem;
+    color: #FF0000;
+    margin: 0;
+}

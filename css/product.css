@@ -1,0 +1,118 @@
+/* Universal styles for the entire website. */
+body {
+    margin: 0;
+    font-family: 'Bitcount Grid Single', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    box-sizing: border-box;
+    /* Add background image properties */
+    background-image: url('../images/NOBODYBEANYBODYGOD.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Ensure image doesn't tile */
+    background-attachment: fixed; /* Keep image fixed in viewport */
+    opacity: 0.8; /* Apply opacity to the background image */
+}
+
+
+
+/* Main container for the landing page. */
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Header and navigation styling. */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Libertinus Serif Display', serif;
+    position: relative;
+    transition: opacity 0.2s;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* Common styles for the other pages. */
+
+
+
+.product-box {
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    position: relative;
+}
+
+.buy-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ff000000;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+
+
+/* Responsive design for smaller screens. */
+@media (max-width: 768px) {
+    .header {
+        justify-content: center;
+    }
+    .navigation {
+        gap: 15px;
+    }
+    
+}
