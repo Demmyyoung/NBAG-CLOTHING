@@ -1,0 +1,61 @@
+/* Cart page specific styles */
+
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 100px auto 20px auto; /* Adjust margin-top for header */
+    text-align: center;
+}
+
+.cart-message-section {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cart-message-title {
+    font-family: 'Libertinus Serif Display', serif; /* Matching about page heading */
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.cart-message-text {
+    font-family: 'Libertinus Serif Display', serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #eee;
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments for cart page */
+@media (max-width: 768px) {
+    .cart-content {
+        margin-top: 80px; /* Adjust for header on smaller screens */
+        padding: 15px;
+    }
+    .cart-message-title {
+        font-size: 2.5rem;
+    }
+    .cart-message-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-content {
+        margin-top: 60px; /* Further adjust for header on very small screens */
+        padding: 10px;
+    }
+    .cart-message-title {
+        font-size: 2rem;
+    }
+    .cart-message-text {
+        font-size: 0.9rem;
+    }
+}

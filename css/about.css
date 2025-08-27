@@ -1,0 +1,61 @@
+/* About page specific styles */
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 100px auto 20px auto; /* Adjust margin-top for header */
+    text-align: center;
+}
+
+.about-section {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.about-title {
+    font-family: 'Libertinus Serif Display', serif;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-family: 'Libertinus Serif Display', serif;
+    font-size: 1.2rem; /* Increased font size */
+    line-height: 1.6;
+    color: #fff; /* Changed to pure white */
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments for about page */
+@media (max-width: 768px) {
+    .about-content {
+        margin-top: 80px; /* Adjust for header on smaller screens */
+        padding: 15px;
+    }
+    .about-title {
+        font-size: 2.5rem;
+    }
+    .about-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        margin-top: 60px; /* Further adjust for header on very small screens */
+        padding: 10px;
+    }
+    .about-title {
+        font-size: 2rem;
+    }
+    .about-text {
+        font-size: 0.9rem;
+    }
+}
