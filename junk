@@ -9,3 +9,23 @@
             <main class="main-content">
             <h1 class="main-title">Gallery</h1>
         </main>
+
+
+
+
+         </div>
+            <div class="product-box">
+                <button class="buy-button">Buy</button>
+            </div>
+            <div class="product-box">
+                <button class="buy-button">Buy</button>
+            </div>
+            <div class="product-box">
+                <button class="buy-button">Buy</button>
+            </div>
+            <div class="product-box">
+                <button class="buy-button">Buy</button>
+            </div>
+            <div class="product-box">
+                <button class="buy-button">Buy</button>
+            </div>
